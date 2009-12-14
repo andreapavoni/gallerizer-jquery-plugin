@@ -1,8 +1,8 @@
 /*
-  jQuery.Gallerizer 0.1
+	jQuery.Gallerizer 0.1
   Written by Andrea (apeacox) Pavoni, http://d-bricks.com
-  For more information, please visit http://github.com/apeacox/gallerizer-jquery-plugin
-  Released under a MIT License
+	For more information, please visit http://github.com/apeacox/gallerizer
+	Released under a MIT License
   Date: 2009/12/14
 */
 
