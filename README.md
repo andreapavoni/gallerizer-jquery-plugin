@@ -1,4 +1,4 @@
-Gallerizer jQuery Plugin v0.1
+Gallerizer jQuery Plugin v0.1.1
 -------------------------------
 Copyright (c) 2009 Andrea Pavoni. Licensed under the MIT license.
  
@@ -30,3 +30,9 @@ $('#gallerize-item').gallerize($photos,{
   start_at: 1, // position in the array of photos from which to start
   delay: 5000 // delay beetween each image
 });
+
+Changelog:
+  - 2009/12/15 v0.1.1:
+    - fix: if you have only one image, don't start gallerize()
+  - 2009/12/14 v0.1: first initial release
+

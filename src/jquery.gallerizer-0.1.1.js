@@ -1,5 +1,5 @@
 /*
-  jQuery.Gallerizer 0.1
+  jQuery.Gallerizer 0.1.1
   Written by Andrea (apeacox) Pavoni, http://d-bricks.com
   For more information, please visit http://github.com/apeacox/gallerizer-jquery-plugin
   Released under a MIT License
@@ -21,9 +21,11 @@ jQuery.fn.gallerize = function(photos, options) {
   };
 
   counter = settings.start_at;
-
-  return $(this).everyTime(settings.delay, function() {
-    index = ((counter == photos.length) ? counter = 0 : counter++);
-    $(this).show_next(index);
-  }, 0);
+  
+  if (photos.length > 1) {
+    return $(this).everyTime(settings.delay, function() {
+      index = ((counter == photos.length) ? counter = 0 : counter++);
+      $(this).show_next(index);
+    }, 0);
+  }
 };
