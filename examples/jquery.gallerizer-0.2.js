@@ -1,9 +1,9 @@
 /*
-  jQuery.Gallerizer 0.1.1
+  jQuery.Gallerizer 0.2
   Written by Andrea (apeacox) Pavoni, http://d-bricks.com
   For more information, please visit http://github.com/apeacox/gallerizer-jquery-plugin
   Released under a MIT License
-  Date: 2009/12/14
+  Date: 2009/12/21
 */
 
 jQuery.fn.gallerize = function(photos, options) {
@@ -14,18 +14,24 @@ jQuery.fn.gallerize = function(photos, options) {
   }, options);
 
   jQuery.fn.show_next = function(index) {
-    $(this).fadeOut(settings.fade_speed, function () {
+    return $(this).fadeOut(settings.fade_speed, function () {
       $(this).attr('src', photos[index]);
       $(this).fadeIn(settings.fade_speed);
     });
   };
 
+  jQuery.repeat = function(callback) {
+    return window.setInterval(callback,settings.delay);
+  }
+
   counter = settings.start_at;
   
   if (photos.length > 1) {
-    return $(this).everyTime(settings.delay, function() {
+    var obj = $(this);
+    jQuery.repeat(function() {
       index = ((counter == photos.length) ? counter = 0 : counter++);
-      $(this).show_next(index);
-    }, 0);
+      obj.show_next(index);
+    });
   }
 };
+
