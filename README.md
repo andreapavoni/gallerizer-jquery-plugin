@@ -1,6 +1,6 @@
-Gallerizer jQuery Plugin v0.2
+Gallerizer jQuery Plugin v0.3
 -------------------------------
-Copyright (c) 2009 Andrea Pavoni. Licensed under the MIT license.
+Copyright (c) 2009-2010 Andrea Pavoni. Licensed under the MIT license.
  
 
 Overview
@@ -31,14 +31,17 @@ __Step 3b__ - You can even set some options:
      $('#gallerize-item').gallerize($photos,{  
      fade_speed: 1500, // fading in/out speed  
      start_at: 1, // position in the array of photos from which to start  
-     delay: 5000 // delay beetween each image  
+     delay: 5000, // delay from each fade, don't go below 2500 because has *unpredictable* image order
+     autostart: true
      });
 
 Changelog:
 ---------
+*   __2010/01/05 v0.3:__
+    *   new: added support for control-buttons (prev,next,start_stop). see examples/demo.html
 *   __2009/12/21 v0.2:__
-   *   new: internal timer, no more jquery.timers dependency
+    *   new: internal timer, no more jquery.timers dependency
 *   __2009/12/15 v0.1.1:__
-   *   fix: if you have only one image, don't start gallerize()
+    *   fix: if you have only one image, don't start gallerize()
 *   __2009/12/14 v0.1:__
-   *   first initial release
+    *   first initial release
